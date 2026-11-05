@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aplicativo interativo de lista de tarefas">
+    <title>Minha Lista de Tarefas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <h1>Minha Lista de Tarefas</h1>
+        <p>Organize suas atividades de maneira simples!</p>
+    </header>
+
+    <main class="container">
+
+        <section class="task-section">
+
+            <h2>Adicionar nova tarefa</h2>
+
+            <form id="task-form">
+
+                <label for="task-input">Digite sua tarefa:</label>
+
+                <div class="input-group">
+
+                    <input
+                        type="text"
+                        id="task-input"
+                        placeholder="Ex: Estudar JavaScript..."
+                        required
+                        maxlength="120"
+                    >
+
+                    <button type="submit" id="add-button">
+                        Adicionar
+                    </button>
+
+                </div>
+
+            </form>
+
+        </section>
+
+        <section class="task-section">
+
+            <h2>Minhas tarefas</h2>
+
+            <nav class="filters" aria-label="Filtrar tarefas">
+
+                <button class="filter active" data-filter="all">
+                    Todas
+                </button>
+
+                <button class="filter" data-filter="pending">
+                    Pendentes
+                </button>
+
+                <button class="filter" data-filter="completed">
+                    Concluídas
+                </button>
+
+            </nav>
+
+            <div id="task-list" class="task-list">
+                <!-- As tarefas serão adicionadas aqui pelo JavaScript -->
+            </div>
+
+            <p id="empty-message" class="empty-message">
+                Nenhuma tarefa cadastrada.
+            </p>
+
+            <p id="task-counter" class="task-counter">
+                0 tarefas pendentes
+            </p>
+
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <p>Desenvolvido com HTML, CSS e JavaScript.</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
